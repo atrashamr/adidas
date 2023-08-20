@@ -179,18 +179,22 @@ nav ul li a:hover{
         flex-direction:column ;
         justify-content: center;
     }
+    nav ul{
+        
+        margin: 5px;
+    }
     .content{
         height: 90%;
     }
     .content .photo,.content .text{
-        width: 80%;
+        width: 100%;
     }
     .content .photo img{
-        width: 350px;
+        width: 300px;
     }
    
     .nav ul li{
-        margin: 0 10px;
+        margin: 3px 5px;
     }
     .content h2{
         font-size: 35px;
@@ -198,6 +202,36 @@ nav ul li a:hover{
     body::after{
         clip-path: circle(45% at bottom);
 
+    }
+    .content h2,.content p{
+        -webkit-animation-name: slideInLeft;
+        animation-name: slideInLeft;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+        @-webkit-keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
+        }
+        @keyframes slideInLeft {
+        0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+        }
+        100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        }
     }
 }
 @media (min-width:901px) and (max-width:1200px){
